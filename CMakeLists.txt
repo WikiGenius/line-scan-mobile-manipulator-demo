@@ -12,6 +12,7 @@ install(DIRECTORY
   docs
   results
   media
+  scripts
   DESTINATION share/${PROJECT_NAME}
   OPTIONAL
 )

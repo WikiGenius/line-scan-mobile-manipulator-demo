@@ -3,7 +3,7 @@
 ## Overview
 This repository is the main public scaffold for a line-scan-aware active scanning demo with a mobile manipulator. The project is intended to show how a robot can plan scanning viewpoints while considering visibility, coverage, sensing geometry, robot reachability, and task constraints.
 
-The current repository is intentionally lightweight. It documents the planned public structure and will be expanded with source code, launch files, results, and media as the demo matures. Unpublished algorithms, datasets, and exact experiment settings should remain private until they are ready for release.
+The repository now includes a small synthetic coverage-metric starter script. Unpublished algorithms, datasets, and exact experiment settings should remain private until they are ready for release.
 
 ## Repository Role
 This is the public portfolio anchor for the research direction: structure-aware planning and control for mobile manipulation.
@@ -29,6 +29,7 @@ This repository is designed to become a clean public demo for that planning prob
 
 ## Features
 - Public project structure for a ROS 2 mobile manipulation demo.
+- Synthetic starter script for cumulative coverage bookkeeping.
 - Planned line-scan-aware viewpoint and coverage planning workflow.
 - Planned integration points for mobile base motion, manipulator motion, and sensor visibility checks.
 - Planned links to state estimation, control, and 3D perception support repositories.
@@ -44,10 +45,18 @@ The planned method decomposes active scanning into a small set of engineering mo
 5. Execute or simulate the selected scan plan with a mobile manipulator.
 6. Log coverage, tracking, and planning metrics for comparison.
 
-Detailed algorithms and unpublished experiment settings will be added only when they are ready for public release.
+The current toy script only demonstrates step 3 and cumulative coverage bookkeeping on synthetic data. Detailed algorithms and unpublished experiment settings will be added only when they are ready for public release.
 
 ## Installation
-This is currently a scaffold repository. Once ROS 2 source files are added, the intended workflow is:
+For the starter Python script:
+
+```bash
+git clone https://github.com/WikiGenius/line-scan-mobile-manipulator-demo.git
+cd line-scan-mobile-manipulator-demo
+python scripts/coverage_metric_demo.py
+```
+
+Once ROS 2 source files are added, the intended workflow is:
 
 ```bash
 mkdir -p ~/ros2_ws/src
@@ -60,16 +69,26 @@ source install/setup.bash
 ```
 
 ## Run
-Planned launch command after the first runnable demo is added:
+Run the current toy coverage metric:
+
+```bash
+python scripts/coverage_metric_demo.py
+```
+
+Planned launch command after the first ROS2 demo is added:
 
 ```bash
 ros2 launch line_scan_mobile_manipulator_demo demo.launch.py
 ```
 
-Until launch files are added, use this repository as a public project outline and documentation scaffold.
-
 ## Results
-Results will be added under `results/` and public demo media under `media/`.
+The starter script writes:
+
+```text
+results/coverage_metric_demo.csv
+```
+
+Future results will be added under `results/` and public demo media under `media/`.
 
 Planned artifacts:
 
@@ -80,12 +99,13 @@ Planned artifacts:
 - Tracking and estimation summary metrics.
 
 ## Limitations
-- The public repository currently contains scaffolding, not a complete runnable demo.
+- The current script is a synthetic coverage bookkeeping example, not a complete planner.
 - Sensor, robot, and environment models are not yet included.
 - The public method will be simplified compared with any unpublished research experiments.
 - Private datasets, paper-specific ablations, and exact unpublished algorithm details are intentionally excluded.
 
 ## Roadmap
+- [x] Add synthetic coverage-metric starter script.
 - [ ] Add baseline scanning planner.
 - [ ] Add visibility and coverage metrics.
 - [ ] Add ROS 2 launch workflow.
@@ -97,4 +117,4 @@ Planned artifacts:
 This project is motivated by robotics research in active perception, coverage planning, mobile manipulation, inspection, and visual/spectral sensing. Cite any papers, datasets, or libraries used when implementation details are added.
 
 ## Related Organization
-See [`docs/related-repositories.md`](docs/related-repositories.md) for the public/private organization around this main demo.
+See [`docs/related-repositories.md`](docs/related-repositories.md) for the public/private organization around this main demo and [`docs/method-sketch.md`](docs/method-sketch.md) for the starter method sketch.

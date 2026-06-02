@@ -12,7 +12,7 @@ This repository is the public anchor for structure-aware line-scan / RGB-hypersp
 | Control foundation | [`robotics-control-learning-labs`](https://github.com/WikiGenius/robotics-control-learning-labs) | LQR, observers, state-space modeling, and control baselines. |
 | Trajectory tracking | [`wmm-trajectory-tracking`](https://github.com/WikiGenius/wmm-trajectory-tracking) | Whole-body mobile-manipulator tracking experiments and future tracking plots. |
 | State estimation | [`GTSAM_SLAM_VISION`](https://github.com/WikiGenius/GTSAM_SLAM_VISION) | Factor-graph visual estimation and SLAM-style optimization experiments. |
-| Visual state-estimation scaffold | [`orb_slam_demo`](https://github.com/WikiGenius/orb_slam_demo) | ROS2 scaffold for ORB-SLAM-style visual state-estimation experiments. |
+| Husky image capture | [`husky-gazebo-image-capture`](https://github.com/WikiGenius/husky-gazebo-image-capture) | ROS2 Humble support node for collecting Gazebo Husky image/odometry snapshots for later visual-SLAM experiments. |
 | 3D perception / view synthesis | [`nerf-lab`](https://github.com/WikiGenius/nerf-lab) | NeRF and ray-based intuition for view coverage, scene representation, and active perception. |
 | Literature map | [`research-reading-map`](https://github.com/WikiGenius/research-reading-map) | Paper taxonomy, reading path, reproduction ideas, and method relationships. |
 

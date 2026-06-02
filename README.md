@@ -1,120 +1,203 @@
 # Line-Scan Mobile Manipulator Demo
 
-## Overview
-This repository is the main public scaffold for a line-scan-aware active scanning demo with a mobile manipulator. The project is intended to show how a robot can plan scanning viewpoints while considering visibility, coverage, sensing geometry, robot reachability, and task constraints.
+Public scaffold for organizing future work on line-scan-aware active scanning and coverage planning for mobile manipulators.
 
-The repository now includes a small synthetic coverage-metric starter script. Unpublished algorithms, datasets, and exact experiment settings should remain private until they are ready for release.
+This repository is part of a broader PhD research workflow on structure-aware planning and control, where robot motion is designed not only to reach a target but also to acquire useful visual or spectral information under physical, geometric, sensing, and uncertainty constraints.
 
-## Repository Role
-This is the public portfolio anchor for the research direction: structure-aware planning and control for mobile manipulation.
+## Purpose
 
-It should eventually connect these layers:
+The purpose of this repo is to keep the public-facing structure of the line-scan / RGB-to-hyperspectral active scanning project organized without exposing unpublished algorithms, real lab data, paper drafts, advisor notes, or private experiment details.
+
+It currently hosts scaffold files, documentation, and small synthetic toy examples. It does not yet contain a complete mobile-manipulator planner or validated line-scan sensor model.
+
+## Relation to My PhD Direction
+
+This repo connects to my PhD direction through:
+
+- mobile manipulation for inspection and scanning tasks,
+- structure-aware planning under visibility and coverage constraints,
+- line-scan / one-row RGB sensing as a public proxy for hyperspectral pushbroom acquisition,
+- future geometric, kinematic, collision, and uncertainty constraints,
+- state-estimation and control links through supporting repos,
+- eventual ROS2 / MoveIt integration for robot simulation and execution.
+
+Related public repos:
 
 | Layer | Related repo | Role |
 |---|---|---|
-| Mobile manipulation execution | [`ros2-moveit-grasping-demo`](https://github.com/WikiGenius/ros2-moveit-grasping-demo) | MoveIt2 planning, Cartesian approach, gripper control, grasping, and retreat motion. |
-| ROS2 mobile robotics | [`ros2-mobile-robotics-labs`](https://github.com/WikiGenius/ros2-mobile-robotics-labs) | ROS2 nodes, launch files, URDF/RViz, and simulation learning labs. |
-| Control foundation | [`robotics-control-learning-labs`](https://github.com/WikiGenius/robotics-control-learning-labs) | State-space, LQR, observers, and reproducible control examples. |
-| Trajectory tracking | [`wmm-trajectory-tracking`](https://github.com/WikiGenius/wmm-trajectory-tracking) | Whole-body mobile-manipulator tracking support. |
-| State estimation | [`GTSAM_SLAM_VISION`](https://github.com/WikiGenius/GTSAM_SLAM_VISION) | Factor-graph visual SLAM and pose-estimation experiments. |
-| Visual representation | [`nerf-lab`](https://github.com/WikiGenius/nerf-lab) | NeRF / view-synthesis intuition for viewpoint coverage and 3D perception. |
-| Literature map | [`research-reading-map`](https://github.com/WikiGenius/research-reading-map) | Paper taxonomy and research roadmap for active perception, coverage, estimation, and control. |
+| Mobile manipulation execution | [`ros2-moveit-grasping-demo`](https://github.com/WikiGenius/ros2-moveit-grasping-demo) | Perception-guided grasping and MoveIt2 execution evidence. |
+| ROS2 systems | [`ros2-mobile-robotics-labs`](https://github.com/WikiGenius/ros2-mobile-robotics-labs) | ROS2 launch, nodes, simulation, and mobile robotics foundations. |
+| Control | [`robotics-control-learning-labs`](https://github.com/WikiGenius/robotics-control-learning-labs) | LQR, observers, state-space control, and tracking foundations. |
+| State estimation | [`GTSAM_SLAM_VISION`](https://github.com/WikiGenius/GTSAM_SLAM_VISION) | Factor-graph visual estimation and SLAM-style experiments. |
+| 3D perception | [`nerf-lab`](https://github.com/WikiGenius/nerf-lab) | Ray/view-synthesis intuition for active perception. |
+| Literature map | [`research-reading-map`](https://github.com/WikiGenius/research-reading-map) | Paper taxonomy and public research architecture. |
 
-## Research/Engineering Motivation
-Line-scan and inspection tasks appear in robotics applications such as surface inspection, industrial metrology, agricultural scanning, mobile manipulation, and active perception. A mobile manipulator must reason about where to move, how to orient the sensor, and how to maintain coverage while respecting robot reachability and visibility constraints.
+## Maturity Level
 
-The larger research question is how robot motion can be designed not only to reach a target, but also to acquire useful visual or spectral information under physical, geometric, sensing, and uncertainty constraints.
+**Current status:** Public research scaffold / early-stage organization repo
 
-This repository is designed to become a clean public demo for that planning problem without exposing unpublished experiment details.
+This repository is currently intended to organize the public-facing structure of the project and host simplified, non-confidential demos. It does not yet represent a complete research implementation or a validated planner.
 
-## Features
-- Public project structure for a ROS 2 mobile manipulation demo.
-- Synthetic starter script for cumulative coverage bookkeeping.
-- Planned line-scan-aware viewpoint and coverage planning workflow.
-- Planned integration points for mobile base motion, manipulator motion, and sensor visibility checks.
-- Planned links to state estimation, control, and 3D perception support repositories.
-- Documentation-first organization for future reproducible experiments.
+### Implemented now
 
-## Method
-The planned method decomposes active scanning into a small set of engineering modules:
+- [x] Repository structure
+- [x] README and project organization
+- [x] Public/private boundary notes
+- [x] Roadmap and candidate metric documentation
+- [x] Minimal toy coverage scripts using synthetic data
+- [x] CSV output from toy coverage examples
+- [x] Dependency-free SVG toy coverage plot
+- [ ] Baseline planner
+- [ ] ROS2/MoveIt integration
+- [ ] Robot-aware reachability/collision checks
+- [ ] Benchmark comparison
+- [ ] Paper-supporting implementation
 
-1. Represent the target surface or inspection region.
-2. Generate candidate scanning viewpoints or trajectories.
-3. Check visibility, viewing angle, and coverage constraints.
-4. Filter candidates using robot reachability and motion constraints.
-5. Execute or simulate the selected scan plan with a mobile manipulator.
-6. Log coverage, tracking, and planning metrics for comparison.
+### Not included publicly
 
-The current toy script only demonstrates step 3 and cumulative coverage bookkeeping on synthetic data. Detailed algorithms and unpublished experiment settings will be added only when they are ready for public release.
+- Unpublished research algorithm
+- Private paper draft
+- Advisor/collaborator notes
+- Real lab data
+- Full ablation studies
+- Confidential experiment results
+- Full hyperspectral/RGB scanning pipeline
 
-## Installation
-For the starter Python script:
+## Current Contents
+
+```text
+docs/          project scope, roadmap, terminology, metrics, and boundaries
+src/           public-safe toy line-scan coverage demo
+scripts/       simple coverage-metric starter script
+experiments/   future public experiment notes
+results/       generated toy outputs and future result artifacts
+media/         future GIFs/screenshots/videos
+launch/        future ROS2 launch files
+```
+
+Key files:
+
+- [`src/toy_line_scan_coverage_demo.py`](src/toy_line_scan_coverage_demo.py) - synthetic grid/scan-line coverage demo.
+- [`scripts/coverage_metric_demo.py`](scripts/coverage_metric_demo.py) - small cumulative coverage bookkeeping script.
+- [`docs/project_scope.md`](docs/project_scope.md) - what this repo studies and what is not implemented.
+- [`docs/public_private_boundary.md`](docs/public_private_boundary.md) - what stays public vs private.
+- [`docs/roadmap.md`](docs/roadmap.md) - staged development plan.
+- [`docs/metrics.md`](docs/metrics.md) - candidate metrics.
+- [`TODO.md`](TODO.md) - next practical tasks.
+
+## What This Repo Demonstrates Now
+
+This repo currently demonstrates:
+
+- a clean public research scaffold for active scanning,
+- a toy coverage bookkeeping pattern on synthetic data,
+- a dependency-free toy SVG plot showing accumulated scan-line coverage,
+- public documentation boundaries for protecting unpublished research,
+- a staged roadmap from scaffold to post-publication release.
+
+The toy scripts are only intended to demonstrate the idea of accumulating coverage from scan lines over a synthetic grid. They are not mobile-manipulator planners and do not model real sensor physics.
+
+## Planned Development Roadmap
+
+- **Stage 0: repository scaffold** - organize README, docs, folders, public/private policy, and TODO.
+- **Stage 1: toy synthetic example** - simulate line coverage over a simple synthetic grid.
+- **Stage 2: metric computation** - compute coverage ratio, missing coverage, redundancy, and visibility violations.
+- **Stage 3: baseline planner** - add naive raster scan or fixed-standoff baseline.
+- **Stage 4: ROS2/MoveIt integration** - connect planning outputs to a robot simulation pipeline.
+- **Stage 5: experiment logging and plots** - save metrics, plots, and public-safe logs.
+- **Stage 6: paper-supporting private implementation** - keep full method, real data, and ablations private.
+- **Stage 7: post-publication public release** - publish sanitized code/results after advisor approval and/or publication.
+
+See [`docs/roadmap.md`](docs/roadmap.md) for the staged roadmap.
+
+## Public / Private Boundary
+
+Public here:
+
+- simplified explanations,
+- synthetic toy data,
+- starter scripts,
+- candidate metrics,
+- non-confidential plots,
+- public roadmap and limitations.
+
+Private elsewhere:
+
+- full unpublished method,
+- paper drafts,
+- real RGB/hyperspectral lab data,
+- advisor/collaborator notes,
+- detailed gap analysis,
+- full ablation studies,
+- collaboration records.
+
+See [`docs/public_private_boundary.md`](docs/public_private_boundary.md).
+
+## How to Run
+
+Run the toy scan-line coverage demo:
 
 ```bash
-git clone https://github.com/WikiGenius/line-scan-mobile-manipulator-demo.git
-cd line-scan-mobile-manipulator-demo
+python src/toy_line_scan_coverage_demo.py
+```
+
+It writes:
+
+```text
+results/tables/toy_line_scan_coverage.csv
+results/figures/toy_line_scan_coverage.svg
+```
+
+Run the simpler cumulative coverage metric script:
+
+```bash
 python scripts/coverage_metric_demo.py
 ```
 
-Once ROS 2 source files are added, the intended workflow is:
-
-```bash
-mkdir -p ~/ros2_ws/src
-cd ~/ros2_ws/src
-git clone https://github.com/WikiGenius/line-scan-mobile-manipulator-demo.git
-cd ~/ros2_ws
-rosdep install --from-paths src --ignore-src -r -y
-colcon build --packages-select line_scan_mobile_manipulator_demo
-source install/setup.bash
-```
-
-## Run
-Run the current toy coverage metric:
-
-```bash
-python scripts/coverage_metric_demo.py
-```
-
-Planned launch command after the first ROS2 demo is added:
-
-```bash
-ros2 launch line_scan_mobile_manipulator_demo demo.launch.py
-```
-
-## Results
-The starter script writes:
+It writes:
 
 ```text
 results/coverage_metric_demo.csv
 ```
 
-Future results will be added under `results/` and public demo media under `media/`.
+No complete ROS2/mobile-manipulator demo is included yet. The next planned step is to add a minimal baseline scan planner over a synthetic target.
 
-Planned artifacts:
+## Expected Future Outputs
 
-- Coverage plots.
-- Viewpoint-selection visualizations.
-- RViz screenshots or GIFs.
-- Scan trajectory and constraint summaries.
-- Tracking and estimation summary metrics.
+Future public artifacts may include:
+
+- coverage plots,
+- scan-line GIFs,
+- RViz screenshots,
+- experiment logs,
+- benchmark tables,
+- candidate metric summaries,
+- technical report after review,
+- paper links only after advisor approval and/or publication.
 
 ## Limitations
-- The current script is a synthetic coverage bookkeeping example, not a complete planner.
-- Sensor, robot, and environment models are not yet included.
-- The public method will be simplified compared with any unpublished research experiments.
-- Private datasets, paper-specific ablations, and exact unpublished algorithm details are intentionally excluded.
 
-## Roadmap
-- [x] Add synthetic coverage-metric starter script.
-- [ ] Add baseline scanning planner.
-- [ ] Add visibility and coverage metrics.
-- [ ] Add ROS 2 launch workflow.
-- [ ] Add a synthetic scan target or simple public scene.
-- [ ] Add experiment logs and public demo media.
-- [ ] Add paper/report link when available.
+This repository is currently an early-stage public scaffold. It does not yet include:
+
+- a complete robot model,
+- a validated line-scan sensor model,
+- real robot experiments,
+- full mobile-manipulator motion planning,
+- full state estimation,
+- collision checking or reachability analysis,
+- benchmark comparisons,
+- paper-level results.
+
+The current toy scripts use synthetic geometry only and should not be interpreted as a validated research method.
 
 ## Citation / Acknowledgment
+
 This project is motivated by robotics research in active perception, coverage planning, mobile manipulation, inspection, and visual/spectral sensing. Cite any papers, datasets, or libraries used when implementation details are added.
 
+## Rights and Reuse
+
+This repository is shared as a public academic portfolio/scaffold. Unless a separate open-source license is explicitly added, all rights are reserved by the author.
+
 ## Related Organization
+
 See [`docs/related-repositories.md`](docs/related-repositories.md) for the public/private organization around this main demo and [`docs/method-sketch.md`](docs/method-sketch.md) for the starter method sketch.

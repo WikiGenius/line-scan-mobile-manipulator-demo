@@ -10,9 +10,11 @@ find_package(ament_cmake REQUIRED)
 install(DIRECTORY
   launch
   docs
+  experiments
   results
   media
   scripts
+  src
   DESTINATION share/${PROJECT_NAME}
   OPTIONAL
 )

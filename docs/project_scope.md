@@ -40,7 +40,7 @@ The following should remain private until advisor approval, publication, or sani
 
 This repository does not yet include:
 
-- a validated line-scan sensor model,
+- a tested line-scan sensor model,
 - a complete mobile-manipulator planner,
 - ROS2/MoveIt integration,
 - real robot or lab-data experiments,

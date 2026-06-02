@@ -6,11 +6,11 @@ This document defines what belongs in the public scaffold and what should stay p
 
 Safe public content:
 
-- simplified demo code,
-- synthetic data,
+- simplified demo code after review,
+- synthetic data after review,
 - high-level explanation,
-- toy scripts,
-- non-confidential plots,
+- public-safe scripts after they actually exist,
+- non-confidential plots after they are intentionally generated,
 - candidate metrics,
 - public roadmap,
 - limitations,

@@ -31,7 +31,7 @@ Keep the following private until publication or public release is appropriate:
 When a private experiment is ready to become public, release a simplified version here:
 
 1. Use a synthetic or non-sensitive scene.
-2. Replace private datasets with small generated examples.
+2. Replace private datasets only with approved public-safe examples.
 3. Expose baseline planners and metrics first.
 4. Keep paper-specific details private until the publication strategy is clear.
 5. Add screenshots, GIFs, or plots under `media/` and `results/`.

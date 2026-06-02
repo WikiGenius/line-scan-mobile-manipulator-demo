@@ -30,4 +30,4 @@ A simple comparison method such as raster scanning, fixed-standoff scanning, or 
 
 ## Public Scaffold
 
-An early repository that organizes safe public structure, toy examples, and documentation before full research code is ready to release.
+An early repository that organizes safe public structure and documentation before full research code is ready to release.

@@ -21,8 +21,7 @@ The public repository currently includes:
 - README and documentation,
 - candidate metrics,
 - public/private boundary notes,
-- synthetic toy coverage scripts,
-- generated toy CSV/SVG outputs when scripts are run.
+- related-repository organization.
 
 ## What Is Intentionally Private
 
@@ -53,7 +52,7 @@ This repository does not yet include:
 
 Public success milestones:
 
-1. A minimal synthetic line-scan example runs from a clean checkout.
+1. A minimal public-safe line-scan example runs from a clean checkout.
 2. Coverage metrics are computed and saved.
 3. A naive baseline planner is added.
 4. Public plots/GIFs show coverage behavior on synthetic data.

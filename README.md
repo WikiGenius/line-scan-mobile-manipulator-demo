@@ -1,14 +1,14 @@
 # Line-Scan Mobile Manipulator Demo
 
-Public scaffold for organizing future work on line-scan-aware active scanning and coverage planning for mobile manipulators.
+Public organization repo for future work on line-scan-aware active scanning and coverage planning for mobile manipulators.
 
-This repository is part of a broader PhD research workflow on structure-aware planning and control, where robot motion is designed not only to reach a target but also to acquire useful visual or spectral information under physical, geometric, sensing, and uncertainty constraints.
+This repository is part of a broader PhD research direction on structure-aware planning and control, where robot motion is designed not only to reach a target but also to acquire useful visual or spectral information under physical, geometric, sensing, and uncertainty constraints.
 
 ## Purpose
 
-The purpose of this repo is to keep the public-facing structure of the line-scan / RGB-to-hyperspectral active scanning project organized without exposing unpublished algorithms, real lab data, paper drafts, advisor notes, or private experiment details.
+The purpose of this repo is to organize the public-facing structure of the line-scan / RGB-to-hyperspectral active scanning project without exposing unpublished algorithms, real lab data, paper drafts, advisor notes, or private experiment details.
 
-It currently hosts scaffold files, documentation, and small synthetic toy examples. It does not yet contain a complete mobile-manipulator planner or validated line-scan sensor model.
+This repo currently contains documentation, scope notes, public/private boundaries, candidate metrics, and placeholders for future public-safe demos. It does not currently contain a runnable planner, synthetic demo script, generated result, mobile-manipulator implementation, or validated line-scan sensor model.
 
 ## Relation to My PhD Direction
 
@@ -29,14 +29,14 @@ Related public repos:
 | ROS2 systems | [`ros2-mobile-robotics-labs`](https://github.com/WikiGenius/ros2-mobile-robotics-labs) | ROS2 launch, nodes, simulation, and mobile robotics foundations. |
 | Control | [`robotics-control-learning-labs`](https://github.com/WikiGenius/robotics-control-learning-labs) | LQR, observers, state-space control, and tracking foundations. |
 | State estimation | [`GTSAM_SLAM_VISION`](https://github.com/WikiGenius/GTSAM_SLAM_VISION) | Factor-graph visual estimation and SLAM-style experiments. |
-| 3D perception | [`nerf-lab`](https://github.com/WikiGenius/nerf-lab) | Ray/view-synthesis intuition for active perception. |
+| 3D perception | [`nerf-lab`](https://github.com/WikiGenius/nerf-lab) | View synthesis and scene-representation intuition for active perception. |
 | Literature map | [`research-reading-map`](https://github.com/WikiGenius/research-reading-map) | Paper taxonomy and public research architecture. |
 
 ## Maturity Level
 
-**Current status:** Public research scaffold / early-stage organization repo
+**Current status:** Public research organization repo / early-stage scaffold
 
-This repository is currently intended to organize the public-facing structure of the project and host simplified, non-confidential demos. It does not yet represent a complete research implementation or a validated planner.
+This repository is currently intended to show the research direction, repo structure, and development boundary. It does not yet represent a complete research implementation or a validated planner.
 
 ### Implemented now
 
@@ -44,10 +44,9 @@ This repository is currently intended to organize the public-facing structure of
 - [x] README and project organization
 - [x] Public/private boundary notes
 - [x] Roadmap and candidate metric documentation
-- [x] Minimal toy coverage scripts using synthetic data
-- [x] CSV output from toy coverage examples
-- [x] Dependency-free SVG toy coverage plot
-- [ ] Baseline planner
+- [x] Relationship map to supporting public repos
+- [ ] Public-safe baseline script
+- [ ] Public-safe synthetic result
 - [ ] ROS2/MoveIt integration
 - [ ] Robot-aware reachability/collision checks
 - [ ] Benchmark comparison
@@ -66,23 +65,21 @@ This repository is currently intended to organize the public-facing structure of
 ## Current Contents
 
 ```text
-docs/          project scope, roadmap, terminology, metrics, and boundaries
-src/           public-safe toy line-scan coverage demo
-scripts/       simple coverage-metric starter script
-experiments/   future public experiment notes
-results/       generated toy outputs and future result artifacts
-media/         future GIFs/screenshots/videos
-launch/        future ROS2 launch files
+docs/          project scope, roadmap, terminology, metrics, boundaries, and repo links
+src/           reserved for future public-safe source files
+experiments/   reserved for future public experiment notes
+results/       reserved for future public-safe result artifacts
+media/         reserved for future GIFs/screenshots/videos
+launch/        reserved for future ROS2 launch files
 ```
 
 Key files:
 
-- [`src/toy_line_scan_coverage_demo.py`](src/toy_line_scan_coverage_demo.py) - synthetic grid/scan-line coverage demo.
-- [`scripts/coverage_metric_demo.py`](scripts/coverage_metric_demo.py) - small cumulative coverage bookkeeping script.
 - [`docs/project_scope.md`](docs/project_scope.md) - what this repo studies and what is not implemented.
 - [`docs/public_private_boundary.md`](docs/public_private_boundary.md) - what stays public vs private.
 - [`docs/roadmap.md`](docs/roadmap.md) - staged development plan.
 - [`docs/metrics.md`](docs/metrics.md) - candidate metrics.
+- [`docs/related-repositories.md`](docs/related-repositories.md) - how the public repos support the research identity.
 - [`TODO.md`](TODO.md) - next practical tasks.
 
 ## What This Repo Demonstrates Now
@@ -90,17 +87,15 @@ Key files:
 This repo currently demonstrates:
 
 - a clean public research scaffold for active scanning,
-- a toy coverage bookkeeping pattern on synthetic data,
-- a dependency-free toy SVG plot showing accumulated scan-line coverage,
+- the intended role of line-scan-inspired sensing in the mobile manipulation research direction,
 - public documentation boundaries for protecting unpublished research,
-- a staged roadmap from scaffold to post-publication release.
-
-The toy scripts are only intended to demonstrate the idea of accumulating coverage from scan lines over a synthetic grid. They are not mobile-manipulator planners and do not model real sensor physics.
+- a staged roadmap from scaffold to future public-safe demos and post-publication release,
+- how supporting public repos connect to planning, control, state estimation, ROS2, MoveIt, and 3D perception.
 
 ## Planned Development Roadmap
 
 - **Stage 0: repository scaffold** - organize README, docs, folders, public/private policy, and TODO.
-- **Stage 1: toy synthetic example** - simulate line coverage over a simple synthetic grid.
+- **Stage 1: public-safe simplified example** - add a clearly labeled synthetic example only after it is intentionally designed and reviewed.
 - **Stage 2: metric computation** - compute coverage ratio, missing coverage, redundancy, and visibility violations.
 - **Stage 3: baseline planner** - add naive raster scan or fixed-standoff baseline.
 - **Stage 4: ROS2/MoveIt integration** - connect planning outputs to a robot simulation pipeline.
@@ -115,10 +110,10 @@ See [`docs/roadmap.md`](docs/roadmap.md) for the staged roadmap.
 Public here:
 
 - simplified explanations,
-- synthetic toy data,
-- starter scripts,
+- repo organization,
 - candidate metrics,
-- non-confidential plots,
+- future public-safe examples,
+- non-confidential plots after they are intentionally created,
 - public roadmap and limitations.
 
 Private elsewhere:
@@ -135,32 +130,9 @@ See [`docs/public_private_boundary.md`](docs/public_private_boundary.md).
 
 ## How to Run
 
-Run the toy scan-line coverage demo:
+There is currently no runnable planner or demo script in this public repo.
 
-```bash
-python src/toy_line_scan_coverage_demo.py
-```
-
-It writes:
-
-```text
-results/tables/toy_line_scan_coverage.csv
-results/figures/toy_line_scan_coverage.svg
-```
-
-Run the simpler cumulative coverage metric script:
-
-```bash
-python scripts/coverage_metric_demo.py
-```
-
-It writes:
-
-```text
-results/coverage_metric_demo.csv
-```
-
-No complete ROS2/mobile-manipulator demo is included yet. The next planned step is to add a minimal baseline scan planner over a synthetic target.
+Future public commands will be added only when the corresponding demo is real, intentional, and safe to publish.
 
 ## Expected Future Outputs
 
@@ -188,11 +160,11 @@ This repository is currently an early-stage public scaffold. It does not yet inc
 - benchmark comparisons,
 - paper-level results.
 
-The current toy scripts use synthetic geometry only and should not be interpreted as a validated research method.
+Any future simplified public examples should be interpreted as portfolio scaffolding unless explicitly described as validated research code.
 
 ## Citation / Acknowledgment
 
-This project is motivated by robotics research in active perception, coverage planning, mobile manipulation, inspection, and visual/spectral sensing. Cite any papers, datasets, or libraries used when implementation details are added.
+This project is motivated by robotics research in active perception, coverage planning, mobile manipulation, inspection, and visual/spectral sensing. Cite any papers, datasets, courses, or libraries used when implementation details are added.
 
 ## Rights and Reuse
 
@@ -200,4 +172,4 @@ This repository is shared as a public academic portfolio/scaffold. Unless a sepa
 
 ## Related Organization
 
-See [`docs/related-repositories.md`](docs/related-repositories.md) for the public/private organization around this main demo and [`docs/method-sketch.md`](docs/method-sketch.md) for the starter method sketch.
+See [`docs/related-repositories.md`](docs/related-repositories.md) for the public/private organization around this main demo and [`docs/method-sketch.md`](docs/method-sketch.md) for the method sketch.

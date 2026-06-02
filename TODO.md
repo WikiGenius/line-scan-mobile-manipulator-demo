@@ -2,9 +2,9 @@
 
 ## Immediate
 
-- [x] Add minimal synthetic line-scan toy example.
-- [x] Add first coverage metric plot.
-- [x] Add example command in README.
+- [ ] Add minimal public-safe line-scan example after review.
+- [ ] Add first coverage metric plot from a real public-safe example.
+- [ ] Add example command in README after runnable code exists.
 - [ ] Add one small GIF or screenshot.
 - [x] Add limitations section.
 
@@ -23,4 +23,4 @@
 - [x] Add project scope.
 - [x] Add roadmap.
 - [x] Add public/private boundary.
-- [ ] Add a short technical note for the toy coverage example.
+- [ ] Add a short technical note after the first public-safe example exists.

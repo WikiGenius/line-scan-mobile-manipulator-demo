@@ -4,19 +4,19 @@
 
 Goal: organize the public-facing project structure.
 
-Status: in progress. The repository now has README structure, public/private boundary notes, candidate metrics, and toy script scaffolding.
+Status: in progress. The repository now has README structure, public/private boundary notes, candidate metrics, and related-repository organization.
 
 ## Stage 1: Minimal synthetic line-scan example
 
 Goal: simulate a line-scan camera over a simple 2D/3D target.
 
-Status: started with `src/toy_line_scan_coverage_demo.py`.
+Status: planned. No public script is currently included.
 
 ## Stage 2: Coverage metric
 
 Goal: compute coverage ratio, missing coverage, and visibility violations.
 
-Status: started with synthetic coverage ratio and per-row coverage summaries.
+Status: planned.
 
 ## Stage 3: Baseline planner
 

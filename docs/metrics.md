@@ -31,4 +31,6 @@ These metrics are candidates for future public demos and private research experi
 
 ## Current Public Status
 
-The current toy scripts only compute simplified coverage on synthetic data. They do not yet evaluate robot kinematics, real sensor physics, collision, or pose uncertainty.
+These metrics are candidates only. No public metric script is currently included in this repository.
+
+Future public examples should clearly state whether they evaluate synthetic coverage only, robot kinematics, real sensor physics, collision, or pose uncertainty.

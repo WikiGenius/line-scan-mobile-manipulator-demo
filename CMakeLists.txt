@@ -13,7 +13,6 @@ install(DIRECTORY
   experiments
   results
   media
-  scripts
   src
   DESTINATION share/${PROJECT_NAME}
   OPTIONAL

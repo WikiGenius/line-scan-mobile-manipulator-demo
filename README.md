@@ -37,7 +37,7 @@ Related public repos:
 
 This repository is intended to organize the public-facing structure of the project and host simplified, non-confidential demos. It does not yet represent a complete research implementation or a tested planner.
 
-### Implemented now
+## Implemented Now
 
 - [x] Repository structure
 - [x] README and project organization
@@ -50,7 +50,7 @@ This repository is intended to organize the public-facing structure of the proje
 - [ ] ROS2/MoveIt integration
 - [ ] Paper-supporting implementation
 
-### Planned later
+## Planned Later
 
 - Minimal synthetic line-scan example.
 - Coverage metric computation.
@@ -61,7 +61,7 @@ This repository is intended to organize the public-facing structure of the proje
 - Uncertainty-aware experiments.
 - Paper-supporting implementation after advisor approval.
 
-### Intentionally private
+## Intentionally Private
 
 - Unpublished research algorithm.
 - Full problem formulation details.

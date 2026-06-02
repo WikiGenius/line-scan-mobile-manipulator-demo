@@ -1,158 +1,135 @@
 # Line-Scan Mobile Manipulator Demo
 
-Public scaffold for organizing future work on line-scan-aware active scanning and coverage planning for mobile manipulators.
+This repository is a public scaffold for organizing future work on line-scan-aware active scanning and coverage planning for mobile manipulators.
+
+It is part of my broader PhD research direction in robotics, control, motion planning, state estimation, and active sensing.
 
 ## Purpose
 
-This repository organizes the public-facing structure of a line-scan / one-row RGB active-scanning project without exposing unpublished algorithms, real lab data, paper drafts, advisor notes, or private experiment details.
+The purpose of this repository is to provide a clean public-facing structure for future non-confidential demos related to line-scan-aware robotic scanning.
 
-It currently contains documentation, scope notes, public/private boundaries, candidate metrics, and folders for future public-safe demos. It does not currently contain a runnable planner, generated result, mobile-manipulator implementation, or tested line-scan sensor model.
+This repository is not intended to expose unpublished PhD algorithms, private paper drafts, real lab data, advisor notes, or detailed private gap analysis.
 
 ## Relation to My PhD Direction
 
-My PhD research focuses on structure-aware planning, state estimation, and active sensing for mobile manipulation. This repo connects to that direction through:
+This repository connects to my research direction through:
 
-- mobile manipulation for inspection and scanning tasks,
-- active sensing where motion is planned to acquire useful visual or spectral information,
-- motion planning under physical and geometric constraints,
-- geometric visibility constraints for scan quality,
-- line-scan / one-row RGB sensing as a public proxy for hyperspectral pushbroom acquisition,
-- state-estimation links through pose uncertainty and visual SLAM,
-- control links through scan trajectory execution and base-arm coordination.
-
-Related public repos:
-
-| Layer | Related repo | Role |
-|---|---|---|
-| Mobile manipulation execution | [`ros2-moveit-grasping-demo`](https://github.com/WikiGenius/ros2-moveit-grasping-demo) | Perception-guided grasping and MoveIt2 execution evidence. |
-| ROS2 systems | [`ros2-mobile-robotics-labs`](https://github.com/WikiGenius/ros2-mobile-robotics-labs) | ROS2 scaffold for future mobile robotics labs. |
-| Control | [`robotics-control-learning-labs`](https://github.com/WikiGenius/robotics-control-learning-labs) | State-space control, LQR, observers, and tracking foundations. |
-| State estimation | [`GTSAM_SLAM_VISION`](https://github.com/WikiGenius/GTSAM_SLAM_VISION) | Factor-graph visual estimation and SLAM-style experiments. |
-| 3D perception | [`nerf-lab`](https://github.com/WikiGenius/nerf-lab) | View synthesis and scene-representation intuition for active perception. |
-| Literature map | [`research-reading-map`](https://github.com/WikiGenius/research-reading-map) | Public reading map and research architecture. |
+- mobile manipulation,
+- active sensing,
+- motion planning,
+- geometric visibility constraints,
+- line-scan / one-row RGB proxy sensing for hyperspectral pushbroom acquisition,
+- state estimation,
+- uncertainty-aware planning,
+- control and execution.
 
 ## Maturity Level
 
-**Current status:** Public research scaffold / early-stage organization repo
+**Current status:** Public research scaffold / early-stage organization repo.
 
-This repository is intended to organize the public-facing structure of the project and host simplified, non-confidential demos. It does not yet represent a complete research implementation or a tested planner.
+This repository is intended to organize the public-facing structure of the project and host simplified, non-confidential demos. It does not yet represent a complete research implementation or a validated planner.
 
-## Implemented Now
+### Implemented Now
 
 - [x] Repository structure
 - [x] README and project organization
 - [x] Public/private boundary documentation
-- [x] Roadmap and candidate metric documentation
-- [x] Relationship map to supporting public repos
 - [ ] Minimal synthetic line-scan demo
 - [ ] Coverage plot or GIF
 - [ ] Baseline comparison
-- [ ] ROS2/MoveIt integration
+- [ ] ROS2 / MoveIt integration
 - [ ] Paper-supporting implementation
 
-## Planned Later
+### Planned Later
 
-- Minimal synthetic line-scan example.
-- Coverage metric computation.
-- Naive raster-scan baseline.
-- Mobile manipulator model.
-- Visibility constraint checks.
-- ROS2/MoveIt integration.
-- Uncertainty-aware experiments.
-- Paper-supporting implementation after advisor approval.
+- Minimal synthetic line-scan example
+- Coverage metric computation
+- Naive raster-scan baseline
+- Mobile manipulator model
+- Visibility constraint checks
+- ROS2 / MoveIt integration
+- Uncertainty-aware experiments
+- Paper-supporting implementation after advisor approval or publication
 
-## Intentionally Private
+### Intentionally Private
 
-- Unpublished research algorithm.
-- Full problem formulation details.
-- Private paper drafts.
-- Advisor/collaborator notes.
-- Real lab data.
-- Detailed gap analysis.
-- Full ablation studies.
-- Confidential experiment results.
+The following materials are intentionally not included in this public repository:
+
+- unpublished research algorithm,
+- full problem formulation details,
+- private paper drafts,
+- advisor and collaborator notes,
+- real lab data,
+- detailed gap analysis,
+- full ablation studies,
+- confidential experiment results.
 
 ## Current Runnable Artifact
 
 No complete runnable demo is included yet. The next planned step is to add a minimal synthetic line-scan coverage example.
 
-## Current Contents
-
-```text
-docs/          project scope, roadmap, terminology, metrics, boundaries, and repo links
-src/           reserved for future public-safe source files
-experiments/   reserved for future public experiment notes
-results/       reserved for future public-safe result artifacts
-media/         reserved for future GIFs/screenshots/videos
-launch/        reserved for future ROS2 launch files
-```
-
-Key files:
-
-- [`docs/project_scope.md`](docs/project_scope.md): what this repo studies and what is not implemented.
-- [`docs/public_private_boundary.md`](docs/public_private_boundary.md): what stays public vs private.
-- [`docs/roadmap.md`](docs/roadmap.md): staged development plan.
-- [`docs/metrics.md`](docs/metrics.md): candidate metrics.
-- [`docs/terminology.md`](docs/terminology.md): terms used in the project.
-- [`docs/related-repositories.md`](docs/related-repositories.md): how public repos support the research identity.
-- [`TODO.md`](TODO.md): next practical tasks.
-
 ## Roadmap
 
-1. Public scaffold.
-2. Minimal synthetic line-scan example.
-3. Coverage metrics.
-4. Baseline planner.
-5. Robot-aware planning.
-6. ROS2/MoveIt integration.
-7. Uncertainty-aware extension.
-8. Paper-supporting release after advisor approval/publication.
+### Stage 0: Public Scaffold
 
-## Public / Private Boundary
+Organize the public-facing repository structure and explain the project scope.
 
-Public here:
+### Stage 1: Minimal Synthetic Line-Scan Example
 
-- high-level explanations,
-- repository organization,
-- candidate metrics,
-- future public-safe examples,
-- non-confidential plots after they are intentionally created,
-- public roadmap and limitations.
+Create a simple non-confidential toy example that simulates a scan line over a synthetic surface or grid.
 
-Private elsewhere:
+### Stage 2: Coverage Metrics
 
-- full unpublished method,
-- paper drafts,
-- real RGB/hyperspectral lab data,
-- advisor/collaborator notes,
-- detailed gap analysis,
-- full ablation studies,
-- collaboration records.
+Compute basic coverage metrics such as covered area, missing coverage, and coverage ratio.
 
-See [`docs/public_private_boundary.md`](docs/public_private_boundary.md).
+### Stage 3: Baseline Planner
 
-## How to Run
+Implement a simple raster-scan or fixed-standoff baseline.
 
-There is currently no runnable planner or demo script in this public repo.
+### Stage 4: Robot-Aware Planning
 
-Future public commands will be added only when the corresponding demo is real, intentional, and safe to publish.
+Introduce mobile base and manipulator kinematic constraints.
+
+### Stage 5: ROS2 / MoveIt Integration
+
+Connect planning outputs to a ROS2 / MoveIt-style robot simulation pipeline.
+
+### Stage 6: Uncertainty-Aware Extension
+
+Evaluate the effect of pose uncertainty on scan coverage and visibility.
+
+### Stage 7: Paper-Supporting Release
+
+Release paper-supporting code only after advisor approval, publication, or explicit release decision.
+
+## Candidate Metrics
+
+Future non-confidential demos may report:
+
+- coverage ratio,
+- missing coverage,
+- scan redundancy,
+- path length,
+- number of scan poses,
+- visibility violation count,
+- collision count,
+- computation time,
+- robustness under pose noise.
 
 ## Limitations
 
-This repository does not yet include:
+This repository is currently an early-stage public scaffold. It does not yet include:
 
 - a complete mobile manipulator model,
-- a tested line-scan sensor model,
+- a validated line-scan sensor model,
 - real robot experiments,
 - full motion planning,
 - full state estimation,
 - benchmark comparisons,
 - paper-level results.
 
-## Citation / Acknowledgment
-
-This project is motivated by robotics research in active perception, coverage planning, mobile manipulation, inspection, and visual/spectral sensing. Cite any papers, datasets, courses, or libraries used when implementation details are added.
-
 ## Rights and Reuse
 
-This repository is shared as a public academic portfolio/scaffold. Unless a separate open-source license is explicitly added, all rights are reserved by the author.
+This repository is shared as a public academic portfolio/scaffold.
+
+Unless a separate open-source license is explicitly added, all rights are reserved by the author.
